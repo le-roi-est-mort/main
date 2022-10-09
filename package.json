@@ -6,7 +6,6 @@
     "dev": "turbo run dev"
   },
   "devDependencies": {
-    "cdktf-cli": "^0.12.1",
-    "turbo": "^1.4.3"
+    "turbo": "^1.5.5"
   }
 }

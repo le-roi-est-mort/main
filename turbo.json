@@ -6,6 +6,9 @@
       "dependsOn": ["^build"],
       "outputs": [".dist/**"]
     },
+    "stacks#build": {
+      "dependsOn": ["build"]
+    },
     "test": {
       "dependsOn": ["build"],
       "outputs": [],

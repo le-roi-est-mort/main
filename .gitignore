@@ -2,3 +2,10 @@
 build
 dist
 node_modules
+*.d.ts
+*.js
+.gen
+tsconfig.tsbuildinfo
+!jest.config.js
+!setup.js
+*target
