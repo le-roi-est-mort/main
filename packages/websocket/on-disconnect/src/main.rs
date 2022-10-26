@@ -17,7 +17,7 @@ struct Response {
 }
 
 #[tokio::main]
-async fn main() -> Result<(), Error> { 
+async fn main() -> Result<(), Error> {
     SimpleLogger::new()
         .with_level(LevelFilter::Info)
         .init()

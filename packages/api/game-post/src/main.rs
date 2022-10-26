@@ -3,11 +3,11 @@ use lambda_runtime::{run, service_fn, Error, LambdaEvent};
 use log::LevelFilter;
 use serde::{Deserialize, Serialize};
 use simple_logger::SimpleLogger;
-use services::player;
+use service
 
 #[derive(Deserialize)]
 struct Request {
-    name: String,
+    player_id: String,
 }
 
 #[derive(Serialize)]
@@ -17,7 +17,7 @@ struct Response {
 }
 
 #[tokio::main]
-async fn main() -> Result<(), Error> { 
+async fn main() -> Result<(), Error> {
     SimpleLogger::new()
         .with_level(LevelFilter::Info)
         .init()
@@ -31,10 +31,8 @@ async fn main() -> Result<(), Error> {
 async fn handler(
     LambdaEvent { payload, context }: LambdaEvent<Request>,
 ) -> Result<Response, Error> {
-    // extract some useful info from the request
     let name = payload.name;
-
-    // prepare the response
+    
     let resp = Response {
         req_id: context.request_id,
         msg: format!("Hello {}!", name),

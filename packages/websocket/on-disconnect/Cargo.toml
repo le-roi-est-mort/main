@@ -1,5 +1,5 @@
 [package]
-name = "on-connect"
+name = "on-disconnect"
 version = "0.1.0"
 edition = "2021"
 
@@ -10,4 +10,4 @@ simple_logger = "2.3.0"
 tokio = { version = "1.21.2", features = ["full"] }
 serde = "1.0.145"
 aws-sdk-dynamodb = "0.19.0"
-services = { path = "../../../shared/services-rs", features = ["player"]}
+services = { path = "../../../shared/services-rs", features = ["game"]}

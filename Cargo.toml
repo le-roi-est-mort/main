@@ -1,5 +1,2 @@
 [workspace]
-members = [
-    "packages",
-    "shared/services-rs"
-]
+members = ["packages/*", "shared/service-rs"]
